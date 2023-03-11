@@ -51,7 +51,7 @@ app.get('/create', (req, res) => {
     
     Blog.findById(id)
     .then(result => {
-       result.body=result.body.replaceAll("\n","<br>");
+      
       res.render('a', { blog: result });
     })
     .catch(err => {
