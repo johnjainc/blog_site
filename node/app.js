@@ -6,7 +6,7 @@ const app=express();
 app.set('view engine', 'ejs');
 const dbURI ="mongodb+srv://johnj:asdfghjkl@cluster0.eyljh7n.mongodb.net/n";
 mongoose.set('strictQuery', true);
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DATABASE_URL ||dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => console.log("connected"))
   .catch(err => console.log(err));
 
