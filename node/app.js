@@ -47,7 +47,8 @@ app.get('/create', (req, res) => {
   });
   app.get('/view/:id',(req,res)=>{
     const id=req.params.id;
-    console.log('in get id');
+    console.log('in get id'+id);
+    res.render('home');
    /* Blog.findById(id)
     .then(result => {
        console.log(result);
