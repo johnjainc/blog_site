@@ -48,14 +48,14 @@ app.get('/create', (req, res) => {
   app.get('/view/:id',(req,res)=>{
     const id=req.params.id;
     console.log('in get id');
-    Blog.findById(id)
+   /* Blog.findById(id)
     .then(result => {
        console.log(result);
       res.render('db', { blog: result });
     })
     .catch(err => {
       console.log(err);
-    });
+    });*/
   });
 app.post('/view/:id',(req,res)=>{
   const id=req.params.id;
