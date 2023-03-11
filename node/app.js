@@ -39,7 +39,7 @@ app.get('/create', (req, res) => {
   
     blog.save()
       .then(result => {
-       res.render('home');
+       res.redirect('/view');
       })
       .catch(err => {
         console.log(err);
