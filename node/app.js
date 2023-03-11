@@ -52,7 +52,7 @@ app.get('/create', (req, res) => {
     Blog.findById(id)
     .then(result => {
        console.log(result);
-      res.render('home', { blog: result });
+      res.render('a', { blog: result });
     })
     .catch(err => {
       console.log(err);
